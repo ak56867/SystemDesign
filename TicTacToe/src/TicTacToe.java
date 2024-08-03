@@ -1,73 +1,112 @@
-import Model.*;
-import org.graalvm.collections.Pair;
-
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 
-public class TicTacToe {
-
-    //using deque because we will remove the first player and add him to last for turn wise game
-    Deque<Player> players;
-
+public class Game {
     Board board;
+    Deque<Player> playerList;
+    int freeCells = 3 * 3;
 
-    Integer freeCells = 3 * 3;
+    public void initialize(){
+        playerList = new LinkedList<>();
 
-    //This initializes the players and board, this can be also done dynamically if required
-    public void intializeGame(){
-        players = new LinkedList<>();
-        PieceX crossPiece = new PieceX();
-        Player player1 = new Player("Player1", crossPiece);
+        PieceX pieceX = new PieceX();
+        Player player1 = new Player("abhinav", pieceX);
 
-        PieceO noughtPiece = new PieceO();
-        Player player2 = new Player("Player2", noughtPiece);
+        PieceO pieceo = new PieceO();
+        Player player2 = new Player("Mohini", pieceo);
 
-        players.add(player1);
-        players.add(player2);
+        playerList.add(player1);
+        playerList.add(player2);
 
         board = new Board(3);
     }
 
     public void startGame(){
+        boolean isWinner = false;
+        int row, col;
 
-        boolean noWinner = true;
-
-        while (noWinner){
-            Player playerTurn = players.removeFirst();
-
+        while(!isWinner) {
+            Player playerTurn = playerList.removeFirst();
+            System.out.println(playerTurn.name + "'s Turn => ");
             board.printBoard();
 
             if(freeCells == 0){
-                noWinner = false;
+                System.out.println("Its a draw!!");
+                isWinner = true;
                 continue;
             }
 
-            System.out.println(playerTurn.name + " Enter row,column: ");
+            System.out.println("Enter coordinates of cell where you want to put your piece: ");
+
             Scanner inputScanner = new Scanner(System.in);
             String s = inputScanner.nextLine();
             String[] values = s.split(",");
-            int row = Integer.parseInt(values[0]);
-            int column = Integer.parseInt(values[1]);
 
-            boolean pieceAddedSuccessfully = board.addPiece(row,column, playerTurn.playingPiece);
+            row = Integer.valueOf(values[0]);
+            col = Integer.valueOf(values[1]);
+
+            row--; col--;
+
+            boolean pieceAddedSuccessfully = board.addPiece(row,col,playerTurn.playingPiece);
+
             if(!pieceAddedSuccessfully){
-                System.out.println("Incorrect input, please enter a valid input");
-                players.addFirst(playerTurn);
+                System.out.println("Incorrect input, please enter again");
+                playerList.addFirst(playerTurn);
                 continue;
             }
-            freeCells--;
-            players.addLast(playerTurn);
 
-            boolean winner = WinnerFound(row,column,playerTurn.playingPiece);
+            freeCells--;
+            playerList.addLast(playerTurn);
+
+            isWinner = winnerFound(row,col,playerTurn.playingPiece.piece);
+
+            if(isWinner){
+                System.out.println("CONGRATULATIONS " + playerTurn.name + " WON!!!");
+                continue;
+            }
         }
     }
 
-    boolean WinnerFound(int row, int column, PlayingPiece playingPiece){
-        for(int i = 0;i<3;i++){
-            if(board[i][column] == null || board[i][column] != playingPiece) break;
+    public boolean winnerFound(int row, int col, Piece piece){
+
+        boolean checkRow = true;
+        boolean checkCol = true;
+        boolean checkMajorDiagonal = true;
+        boolean checkMinorDiagonal = true;
+
+        for(int i=0;i<board.size;i++)
+        {
+            if((board.board[i][col] == null) || (board.board[i][col].piece != piece)){
+                checkCol = false;
+                break;
+            }
         }
-        for()
+
+        for(int j=0;j<board.size;j++)
+        {
+            if(board.board[row][j] == null || (board.board[row][j].piece != piece)){
+                checkRow = false;
+                break;
+            }
+        }
+
+        for(int i=0;i<board.size;i++){
+            if(board.board[i][i] == null || board.board[i][i].piece != piece){
+                checkMajorDiagonal = false;
+                break;
+            }
+        }
+
+        for(int i=0;i<board.size;i++) {
+            for(int j=0;j<board.size;j++) {
+                if(i + j + 1 == board.size && (board.board[i][j] == null || board.board[i][j].piece != piece)) {
+                    checkMinorDiagonal = false;
+                    break;
+                }
+            }
+        }
+
+        return (checkRow || checkCol || checkMajorDiagonal || checkMinorDiagonal);
     }
 }
