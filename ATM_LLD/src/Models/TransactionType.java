@@ -1,2 +1,6 @@
-package Models;public enum TransactionType {
+package Models;
+
+public enum TransactionType {
+    CASH_WITHDRAWAL,
+    CHECK_BALANCE;
 }
