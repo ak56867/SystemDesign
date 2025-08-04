@@ -1,0 +1,223 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.6 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36" version="28.0.6">
+  <diagram name="Page-1" id="h_E245mcNM2Ua-TK_m4V">
+    <mxGraphModel dx="2065" dy="1675" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Expense&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ expenseId: INT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ description: String&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ amount: Double&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ paidByUser: User&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ splitType: ExpenseSplitType&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ splitDetails: List&amp;lt;Split&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="640" y="-600" width="170" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-2" value="Enum ExpenseSplitType" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="-564" width="140" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-3" value="+ EQUAL" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="KIrOyoRKpYWz9xZQ91iw-2">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-4" value="+ UNEQUAL" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="KIrOyoRKpYWz9xZQ91iw-2">
+          <mxGeometry y="52" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-5" value="+ PERCENTAGE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="KIrOyoRKpYWz9xZQ91iw-2">
+          <mxGeometry y="78" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Split&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ user: User&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ amount: Double&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="880" y="-680" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Expense Manager&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ balanceSheetManager&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ splitFactoryObj&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ createExpense(): Expense&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="640" y="-400" width="170" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-8" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="KIrOyoRKpYWz9xZQ91iw-7" target="KIrOyoRKpYWz9xZQ91iw-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="640" y="-380" as="sourcePoint" />
+            <mxPoint x="800" y="-380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-9" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;SplitFactory&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ expenseSplit: ExpenseSplit&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getExpenseSplit()&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="887.5" y="-392" width="165" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-17" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KIrOyoRKpYWz9xZQ91iw-9" target="KIrOyoRKpYWz9xZQ91iw-10">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="490" y="-230" as="sourcePoint" />
+            <mxPoint x="650" y="-230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-18" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KIrOyoRKpYWz9xZQ91iw-7" target="KIrOyoRKpYWz9xZQ91iw-9">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="380" y="-160" as="sourcePoint" />
+            <mxPoint x="540" y="-160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-19" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="840" y="-250" width="270" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ExpenseSplit&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ validateSplit();&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="KIrOyoRKpYWz9xZQ91iw-19">
+          <mxGeometry x="80" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-11" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;EqualSplit&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="KIrOyoRKpYWz9xZQ91iw-19">
+          <mxGeometry y="100" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-12" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;UnequalSplit&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="KIrOyoRKpYWz9xZQ91iw-19">
+          <mxGeometry x="90" y="180" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-13" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;PercentageSplit&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="KIrOyoRKpYWz9xZQ91iw-19">
+          <mxGeometry x="170" y="110" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-14" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.32;entryY=1.029;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="KIrOyoRKpYWz9xZQ91iw-19" source="KIrOyoRKpYWz9xZQ91iw-11" target="KIrOyoRKpYWz9xZQ91iw-10">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-10" y="230" as="sourcePoint" />
+            <mxPoint x="150" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-15" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="KIrOyoRKpYWz9xZQ91iw-19" source="KIrOyoRKpYWz9xZQ91iw-12" target="KIrOyoRKpYWz9xZQ91iw-10">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="170" y="218" as="sourcePoint" />
+            <mxPoint x="217" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-16" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.89;entryY=1.057;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="KIrOyoRKpYWz9xZQ91iw-19" source="KIrOyoRKpYWz9xZQ91iw-13" target="KIrOyoRKpYWz9xZQ91iw-10">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="190" y="298" as="sourcePoint" />
+            <mxPoint x="237" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-20" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KIrOyoRKpYWz9xZQ91iw-1" target="KIrOyoRKpYWz9xZQ91iw-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="800" y="-430" as="sourcePoint" />
+            <mxPoint x="960" y="-430" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="768" y="-645" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-21" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;User&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ userID: INT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ userName: String&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ balanceSheetObj&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="-600" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-22" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="KIrOyoRKpYWz9xZQ91iw-21">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="680" y="-600" as="sourcePoint" />
+            <mxPoint x="380" y="-670" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="680" y="-640" />
+              <mxPoint x="40" y="-640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-23" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;UserManager&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ userList: List&amp;lt;User&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-55" y="-460" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-24" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="KIrOyoRKpYWz9xZQ91iw-23" target="KIrOyoRKpYWz9xZQ91iw-21">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="20" y="-340" as="sourcePoint" />
+            <mxPoint x="180" y="-340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-25" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Splitwise&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ userManagerObj&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ groupManagerObj&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ method(): Type&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-70" y="-280" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-26" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.456;exitY=0.011;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.438;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="KIrOyoRKpYWz9xZQ91iw-25" target="KIrOyoRKpYWz9xZQ91iw-23">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="30" y="-330" as="sourcePoint" />
+            <mxPoint x="190" y="-330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-27" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Group&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ groupID: INT&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ groupName: String&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ groupMembers: List&amp;lt;User&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ expenses: List&amp;lt;Expense&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ expenseManagerObj&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="310" y="-520" width="170" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-28" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="KIrOyoRKpYWz9xZQ91iw-27" target="KIrOyoRKpYWz9xZQ91iw-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="380" y="-430" as="sourcePoint" />
+            <mxPoint x="540" y="-430" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="438" y="-540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-29" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KIrOyoRKpYWz9xZQ91iw-27" target="KIrOyoRKpYWz9xZQ91iw-7">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="480" y="-350" as="sourcePoint" />
+            <mxPoint x="640" y="-350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="438" y="-350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-30" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="KIrOyoRKpYWz9xZQ91iw-27" target="KIrOyoRKpYWz9xZQ91iw-21">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="240" y="-460" as="sourcePoint" />
+            <mxPoint x="400" y="-460" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="-560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-31" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;GroupManager&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ groupList: List&amp;lt;Group&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="270" y="-260" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-32" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="KIrOyoRKpYWz9xZQ91iw-31" target="KIrOyoRKpYWz9xZQ91iw-27">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="270" y="-110" as="sourcePoint" />
+            <mxPoint x="430" y="-110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-33" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KIrOyoRKpYWz9xZQ91iw-25" target="KIrOyoRKpYWz9xZQ91iw-31">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="140" y="-130" as="sourcePoint" />
+            <mxPoint x="300" y="-130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-34" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;BalanceSheet&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ userVsBalance: Map&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ totalExpense: double&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ totalPaymet: double&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ totalYouOwe: double&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ totalYouGetBack: double&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-85" y="-80" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-35" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Balance&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ amountOwe: double&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ amountGetBack: double&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="160" y="-160" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-36" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.013;entryY=0.6;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="KIrOyoRKpYWz9xZQ91iw-34" target="KIrOyoRKpYWz9xZQ91iw-35">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="150" y="20" as="sourcePoint" />
+            <mxPoint x="310" y="20" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="35" y="-120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-37" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;BalanceSheetManager&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ balanceSheetObj&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ updateBalanceSheet()&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="410" y="-70" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-38" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KIrOyoRKpYWz9xZQ91iw-37" target="KIrOyoRKpYWz9xZQ91iw-34">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="260" y="70" as="sourcePoint" />
+            <mxPoint x="420" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-39" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=-0.017;exitY=0.675;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="KIrOyoRKpYWz9xZQ91iw-21" target="KIrOyoRKpYWz9xZQ91iw-34">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="180" y="150" as="sourcePoint" />
+            <mxPoint x="340" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-160" y="-546" />
+              <mxPoint x="-160" y="-25" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-41" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KIrOyoRKpYWz9xZQ91iw-7" target="KIrOyoRKpYWz9xZQ91iw-37">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="630" y="-30" as="sourcePoint" />
+            <mxPoint x="790" y="-30" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="730" y="-25" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KIrOyoRKpYWz9xZQ91iw-42" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="KIrOyoRKpYWz9xZQ91iw-6" target="KIrOyoRKpYWz9xZQ91iw-21">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="300" y="-720" as="sourcePoint" />
+            <mxPoint x="460" y="-720" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="908" y="-700" />
+              <mxPoint x="-20" y="-700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
