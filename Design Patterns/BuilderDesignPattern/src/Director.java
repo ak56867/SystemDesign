@@ -14,10 +14,10 @@ public class Director {
     }
 
     private Student schoolStudent() {
-        return studentBuilder.setRollNumber(1).setAge(5).setFatherName("ABC").setMotherName("xyz").build();
+        return studentBuilder.setRollNumber(1).setAge(5).setFatherName("ABC").setMotherName("xyz").setSubjects().build();
     }
 
     private Student graduateStudent()  {
-        return studentBuilder.setRollNumber(105).setContact(32543).setName("PQR").build();
+        return studentBuilder.setRollNumber(105).setContact(32543).setName("PQR").setSubjects().build();
     }
 }

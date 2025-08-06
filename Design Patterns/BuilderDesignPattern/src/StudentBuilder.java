@@ -5,7 +5,7 @@ public abstract class StudentBuilder {
     String name;
     int age;
     String fatherName;
-    String MotherName;
+    String motherName;
     int contact;
     List<String> subjects;
 
@@ -30,7 +30,7 @@ public abstract class StudentBuilder {
     }
 
     public StudentBuilder setMotherName(String motherName) {
-        MotherName = motherName;
+        this.motherName = motherName;
         return this;
     }
 
